@@ -8,8 +8,8 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar, Text} from 'react-native';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
+import SearchResults from './src/screens/SearchResults';
+import DestinationSearch from './src/screens/DestinationSearch';
 import HomeScreen from './src/screens/HomeScreen/index';
 
 const App = () => {
@@ -17,6 +17,8 @@ const App = () => {
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />
       <HomeScreen />
+      {/* <DestinationSearch /> */}
+      {/* <SearchResults /> */}
     </SafeAreaView>
   );
 };

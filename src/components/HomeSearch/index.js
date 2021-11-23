@@ -1,7 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
+import {styles} from './styles';
 
 const HomeSearch = () => {
   return (
@@ -19,37 +21,18 @@ const HomeSearch = () => {
       {/* previous destination */}
       <View style={styles.row}>
         <View style={styles.iconContainer}>
-          <AntDesign name="clockcircle" size={16} color="black" />
+          <AntDesign name="clockcircle" size={20} color="black" />
         </View>
+        <Text style={styles.destinationText}>Spin Nightclub</Text>
+      </View>
+      <View style={styles.row}>
+        <View style={[styles.iconContainer, {backgroundColor: '#218cff'}]}>
+          <Entypo name={'home'} size={20} color={'#ffffff'} />
+        </View>
+        <Text style={styles.destinationText}>Spin Nightclub</Text>
       </View>
     </View>
   );
 };
 
 export default HomeSearch;
-
-const styles = StyleSheet.create({
-  container: {},
-  inputBoxContainer: {
-    backgroundColor: '#e7e7e7',
-    margin: 10,
-    padding: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  whereToText: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#434343',
-  },
-  timeContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    width: 100,
-    padding: 10,
-    borderRadius: 50,
-  },
-});
